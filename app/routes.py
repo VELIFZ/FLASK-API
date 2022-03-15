@@ -25,7 +25,7 @@ def pokemon():
             return render_template('pokemon.html', form=form, po_name=po_name, weight=weight, height=height, abilities=abilities, types=types, images_url=images_url )
         else:
             return redirect(url_for('pokemon'))
-
+    return render_template('pokemon.html', form=form)
     
 
     # if form.validate_on_submit():

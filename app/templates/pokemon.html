@@ -17,20 +17,21 @@
         </form>
   </div>
 </div>
-
-<div class="col-4 mt-5 pr-5">
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src='{{ images_url }}'>
-  <div class="card-body">
-    <h5 class="card-title">Pokemon Information</h5>
+{% if po_name %} 
+  <div class="col-4 mt-5 pr-5">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src='{{ images_url }}'>
+    <div class="card-body">
+      <h5 class="card-title">Pokemon Information</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Name: <span class='float-right'>{{ po_name.upper() }}</span></li>
+        <li class="list-group-item">Types: <span class='float-right'>{{ types }}</span></li>
+        <li class="list-group-item">Abilities: <span class='float-right'>{{ abilities }}</span></li>
+        <li class="list-group-item">Weight: <span class='float-right'>{{ weight }}</span></li>
+        <li class="list-group-item">Height: <span class='float-right'>{{ height }}</span></li>
+    </ul>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Name: <span class='float-right'>{{ po_name.upper() }}</span></li>
-      <li class="list-group-item">Types: <span class='float-right'>{{ types }}</span></li>
-      <li class="list-group-item">Abilities: <span class='float-right'>{{ abilities }}</span></li>
-      <li class="list-group-item">Weight: <span class='float-right'>{{ weight }}</span></li>
-      <li class="list-group-item">Height: <span class='float-right'>{{ height }}</span></li>
-  </ul>
-</div>
-</div>
+  </div>
+  {% endif %}
 {% endblock %}
