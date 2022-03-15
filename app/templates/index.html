@@ -1,5 +1,10 @@
 {% extends 'components/layout.html'%}
 
+{% block title %} Home {% endblock %}
+
 {% block content %}
+<h1>Pokemon search</h1>
+<h3>Login to start! </h3>
+<a href="{{ url_for('auth.signin') }}">Let's Start</a>
 
 {% endblock %}
